@@ -1,0 +1,411 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* digital_signature
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20250606\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-09 09:12+0000\n"
+"PO-Revision-Date: 2026-03-09 09:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_account_bank_statement_line__digital_sign
+#: model:ir.model.fields,help:digital_signature.field_account_move__digital_sign
+#: model:ir.model.fields,help:digital_signature.field_purchase_order__digital_sign
+msgid "Binary field to store digital signatures."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields.selection,name:digital_signature.selection__res_config_settings__sign_applicable__both
+#: model:ir.model.fields.selection,name:digital_signature.selection__stock_picking__sign_applicable__both
+msgid "Both"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_purchase
+msgid ""
+"Check Sign                                            before confirmation"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_stock_digital_signature
+msgid "Check Sign before confirmation"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_purchase
+msgid ""
+"Check Sign before confirmation\n"
+"                                purchase Order"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model,name:digital_signature.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_stock_picking__sign_on
+msgid "Date and time of signing"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_account_bank_statement_line__sign_on
+#: model:ir.model.fields,help:digital_signature.field_account_move__sign_on
+#: model:ir.model.fields,help:digital_signature.field_purchase_order__sign_on
+msgid "Date and time when the document was signed."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_stock_picking__sign_applicable
+msgid "Define where the digital signature is applicable"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__sign_applicable
+msgid "Define where the digital signature is applicable."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields.selection,name:digital_signature.selection__res_config_settings__sign_applicable__delivery
+#: model:ir.model.fields.selection,name:digital_signature.selection__stock_picking__sign_applicable__delivery
+msgid "Delivery Slip"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_account_bank_statement_line__designation
+#: model:ir.model.fields,field_description:digital_signature.field_account_move__designation
+#: model:ir.model.fields,field_description:digital_signature.field_purchase_order__designation
+#: model:ir.model.fields,field_description:digital_signature.field_stock_picking__designation
+msgid "Designation"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_stock_picking__designation
+msgid "Designation of the person who signed"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_account_bank_statement_line__designation
+#: model:ir.model.fields,help:digital_signature.field_account_move__designation
+#: model:ir.model.fields,help:digital_signature.field_purchase_order__designation
+msgid "Designation of the person who signed the document."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_account_bank_statement_line__is_show_sign_bill
+#: model:ir.model.fields,help:digital_signature.field_account_move__is_show_sign_bill
+msgid "Determines whether the digital signature should be displayed on bills."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_account_bank_statement_line__is_show_signature
+#: model:ir.model.fields,help:digital_signature.field_account_move__is_show_signature
+#: model:ir.model.fields,help:digital_signature.field_purchase_order__is_show_signature
+msgid ""
+"Determines whether the digital signature should be displayed on invoices."
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.purchase_order_form
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_purchase
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_stock_digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.view_move_form
+#: model_terms:ir.ui.view,arch_db:digital_signature.view_picking_form
+msgid "Digital Signature"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_stock_picking__digital_sign
+msgid "Digital signature file"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_stock_picking__is_enable_option
+msgid "Enable Option"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_purchase
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_stock_digital_signature
+msgid "Enable Other Sign Option"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_purchase
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_stock_digital_signature
+msgid "Enable Other Sign Options"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_account_bank_statement_line__is_enable_others
+#: model:ir.model.fields,field_description:digital_signature.field_account_move__is_enable_others
+#: model:ir.model.fields,field_description:digital_signature.field_purchase_order__is_enable_others
+msgid "Enable Others"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_enable_options_inventory
+msgid "Enable options for digital signatures on inventory operations."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_enable_options_invoice
+msgid "Enable options for digital signatures on invoices."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_enable_options_po
+msgid "Enable options for digital signatures on purchase orders."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_stock_picking__is_enable_option
+msgid "Enable or disable digital signature options"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_account_bank_statement_line__is_enable_others
+#: model:ir.model.fields,help:digital_signature.field_account_move__is_enable_others
+#: model:ir.model.fields,help:digital_signature.field_purchase_order__is_enable_others
+msgid "Enables various digital signature options on invoices."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_confirm_sign_inventory
+msgid "Is Confirm Sign Inventory"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_confirm_sign_invoice
+msgid "Is Confirm Sign Invoice"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_confirm_sign_po
+msgid "Is Confirm Sign Po"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_enable_options_inventory
+msgid "Is Enable Options Inventory"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_enable_options_invoice
+msgid "Is Enable Options Invoice"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_enable_options_po
+msgid "Is Enable Options Po"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_show_digital_sign_bill
+msgid "Is Show Digital Sign Bill"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_show_digital_sign_inventory
+msgid "Is Show Digital Sign Inventory"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_show_digital_sign_invoice
+msgid "Is Show Digital Sign Invoice"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__is_show_digital_sign_po
+msgid "Is Show Digital Sign Po"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model,name:digital_signature.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_stock_picking__sign_by
+msgid "Name of the person who signed"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_account_bank_statement_line__sign_by
+#: model:ir.model.fields,help:digital_signature.field_account_move__sign_by
+#: model:ir.model.fields,help:digital_signature.field_purchase_order__sign_by
+msgid "Name of the person who signed the document."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields.selection,name:digital_signature.selection__res_config_settings__sign_applicable__picking_operations
+#: model:ir.model.fields.selection,name:digital_signature.selection__stock_picking__sign_applicable__picking_operations
+msgid "Picking Operations"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model,name:digital_signature.model_purchase_order
+msgid "Purchase Order"
+msgstr "Bon de commande fournisseur"
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_confirm_sign_inventory
+msgid "Require confirmation for digital signatures on inventory operations."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_confirm_sign_invoice
+msgid "Require confirmation for digital signatures on invoices."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_confirm_sign_po
+msgid "Require confirmation for digital signatures on purchase orders."
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_purchase
+msgid ""
+"Show Digital Sign                                            in Purchase "
+"Orders?"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form
+msgid ""
+"Show Digital Sign in                                    Customer Invoice?"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_stock_digital_signature
+msgid "Show Digital Sign in Inventory?"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form
+msgid "Show Digital Sign in Vendor Bill?"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_stock_picking__is_show_sign
+msgid "Show Sign"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_account_bank_statement_line__is_show_signature
+#: model:ir.model.fields,field_description:digital_signature.field_account_move__is_show_signature
+#: model:ir.model.fields,field_description:digital_signature.field_purchase_order__is_show_signature
+msgid "Show Signature"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_account_bank_statement_line__is_show_sign_bill
+#: model:ir.model.fields,field_description:digital_signature.field_account_move__is_show_sign_bill
+msgid "Show Signature on Bills"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form
+msgid "Show digital sign inside customer invoice"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_stock_digital_signature
+msgid ""
+"Show digital sign inside delivery slip,\n"
+"                                inventory options or both"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_stock_digital_signature
+msgid "Show digital sign inside inventory"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form_purchase
+msgid "Show digital sign inside purchase orders"
+msgstr ""
+
+#. module: digital_signature
+#: model_terms:ir.ui.view,arch_db:digital_signature.res_config_settings_view_form
+msgid "Show digital sign inside vendor bill"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_show_digital_sign_bill
+msgid "Show digital signature for bills."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_show_digital_sign_inventory
+msgid "Show digital signature for inventory operations."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_show_digital_sign_invoice
+msgid "Show digital signature for invoices."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_res_config_settings__is_show_digital_sign_po
+msgid "Show digital signature for purchase orders."
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,help:digital_signature.field_stock_picking__is_show_sign
+msgid "Show or hide the digital signature"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_res_config_settings__sign_applicable
+#: model:ir.model.fields,field_description:digital_signature.field_stock_picking__sign_applicable
+msgid "Sign Applicable inside"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_account_bank_statement_line__digital_sign
+#: model:ir.model.fields,field_description:digital_signature.field_account_move__digital_sign
+#: model:ir.model.fields,field_description:digital_signature.field_purchase_order__digital_sign
+#: model:ir.model.fields,field_description:digital_signature.field_stock_picking__digital_sign
+msgid "Signature"
+msgstr ""
+
+#. module: digital_signature
+#. odoo-python
+#: code:addons/digital_signature/models/account_move.py:0
+#: code:addons/digital_signature/models/purchase_order.py:0
+msgid "Signature is missing"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_account_bank_statement_line__sign_by
+#: model:ir.model.fields,field_description:digital_signature.field_account_move__sign_by
+#: model:ir.model.fields,field_description:digital_signature.field_purchase_order__sign_by
+#: model:ir.model.fields,field_description:digital_signature.field_stock_picking__sign_by
+msgid "Signed By"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model.fields,field_description:digital_signature.field_account_bank_statement_line__sign_on
+#: model:ir.model.fields,field_description:digital_signature.field_account_move__sign_on
+#: model:ir.model.fields,field_description:digital_signature.field_purchase_order__sign_on
+#: model:ir.model.fields,field_description:digital_signature.field_stock_picking__sign_on
+msgid "Signed On"
+msgstr ""
+
+#. module: digital_signature
+#: model:ir.model,name:digital_signature.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
