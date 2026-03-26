@@ -105,3 +105,17 @@ class AccountMove(models.Model):
                 self.digital_sign is False:
             raise UserError(_("Signature is missing"))
         return res
+
+    def write(self, vals):
+        if 'digital_sign' in vals:
+            results = []
+            for move in self:
+                move_vals = dict(vals)
+                if move_vals.get('digital_sign'):
+                    if 'sign_on' not in move_vals and not move.sign_on:
+                        move_vals['sign_on'] = fields.Datetime.now()
+                    if 'sign_by' not in move_vals and not move.sign_by:
+                        move_vals['sign_by'] = self.env.user.name
+                results.append(super(AccountMove, move).write(move_vals))
+            return all(results)
+        return super().write(vals)
