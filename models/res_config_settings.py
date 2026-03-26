@@ -29,8 +29,6 @@ class ResConfigSettings(models.TransientModel):
     sign_user_ids = fields.Many2many(
         comodel_name='res.users',
         string='Authorized Sign Users',
-        compute='_compute_sign_user_ids',
-        inverse='_inverse_sign_user_ids',
         domain=[('share', '=', False)],
     )
 
@@ -72,8 +70,9 @@ class ResConfigSettings(models.TransientModel):
         config_parameter='digital_signature.is_show_digital_sign_bill',
         help="Show digital signature for bills.")
 
-    @api.depends_context('uid')
-    def _compute_sign_user_ids(self):
+    @api.model
+    def get_values(self):
+        res = super().get_values()
         param = self.env['ir.config_parameter'].sudo().get_param(
             'digital_signature.authorized_user_ids',
             default='',
@@ -84,13 +83,14 @@ class ResConfigSettings(models.TransientModel):
                 part = part.strip()
                 if part.isdigit():
                     user_ids.append(int(part))
-        for record in self:
-            record.sign_user_ids = [(6, 0, user_ids)]
+        res.update(sign_user_ids=[(6, 0, user_ids)])
+        return res
 
-    def _inverse_sign_user_ids(self):
-        for record in self:
-            value = ','.join(str(uid) for uid in record.sign_user_ids.ids)
-            self.env['ir.config_parameter'].sudo().set_param(
-                'digital_signature.authorized_user_ids',
-                value,
-            )
+    def set_values(self):
+        res = super().set_values()
+        value = ','.join(str(uid) for uid in self.sign_user_ids.ids)
+        self.env['ir.config_parameter'].sudo().set_param(
+            'digital_signature.authorized_user_ids',
+            value,
+        )
+        return res
