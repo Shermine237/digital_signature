@@ -19,12 +19,20 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class ResConfigSettings(models.TransientModel):
     """Inherit re.config.settings to add more fields"""
     _inherit = 'res.config.settings'
+
+    sign_user_ids = fields.Many2many(
+        comodel_name='res.users',
+        string='Authorized Sign Users',
+        compute='_compute_sign_user_ids',
+        inverse='_inverse_sign_user_ids',
+        domain=[('share', '=', False)],
+    )
 
     is_show_digital_sign_po = fields.Boolean(
         config_parameter='digital_signature.is_show_digital_sign_po',
@@ -63,3 +71,26 @@ class ResConfigSettings(models.TransientModel):
     is_show_digital_sign_bill = fields.Boolean(
         config_parameter='digital_signature.is_show_digital_sign_bill',
         help="Show digital signature for bills.")
+
+    @api.depends_context('uid')
+    def _compute_sign_user_ids(self):
+        param = self.env['ir.config_parameter'].sudo().get_param(
+            'digital_signature.authorized_user_ids',
+            default='',
+        )
+        user_ids = []
+        if param:
+            for part in param.split(','):
+                part = part.strip()
+                if part.isdigit():
+                    user_ids.append(int(part))
+        for record in self:
+            record.sign_user_ids = [(6, 0, user_ids)]
+
+    def _inverse_sign_user_ids(self):
+        for record in self:
+            value = ','.join(str(uid) for uid in record.sign_user_ids.ids)
+            self.env['ir.config_parameter'].sudo().set_param(
+                'digital_signature.authorized_user_ids',
+                value,
+            )

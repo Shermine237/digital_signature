@@ -14,13 +14,14 @@
                            invisible="is_show_signature == False">
                         <field name="is_show_signature" invisible="1"/>
                         <field name="is_enable_others" invisible="1"/>
-                        <field name="digital_sign"/>
+                        <field name="is_sign_user_authorized" invisible="1"/>
+                        <field name="digital_sign" widget="signature" readonly="is_sign_user_authorized == False"/>
                         <field name="sign_by"
-                               invisible="is_enable_others == False"/>
+                               invisible="is_enable_others == False" readonly="is_sign_user_authorized == False"/>
                         <field name="designation"
-                               invisible="is_enable_others == False"/>
+                               invisible="is_enable_others == False" readonly="is_sign_user_authorized == False"/>
                         <field name="sign_on"
-                               invisible="is_enable_others == False"/>
+                               invisible="is_enable_others == False" readonly="is_sign_user_authorized == False"/>
                     </group>
                 </group>
             </xpath>

@@ -15,13 +15,14 @@
                     <field name="sign_applicable"/>
                     <group name="inventory_signature" string="Digital Signature"
                            invisible="is_show_sign == False">
-                        <field name="digital_sign"/>
+                        <field name="is_sign_user_authorized" invisible="1"/>
+                        <field name="digital_sign" widget="signature" readonly="is_sign_user_authorized == False"/>
                         <field name="sign_by"
-                               invisible="is_enable_option == False"/>
+                               invisible="is_enable_option == False" readonly="is_sign_user_authorized == False"/>
                         <field name="designation"
-                               invisible="is_enable_option == False"/>
+                               invisible="is_enable_option == False" readonly="is_sign_user_authorized == False"/>
                         <field name="sign_on"
-                               invisible="is_enable_option == False"/>
+                               invisible="is_enable_option == False" readonly="is_sign_user_authorized == False"/>
                     </group>
                 </group>
             </xpath>

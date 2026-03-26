@@ -77,6 +77,30 @@ class AccountMove(models.Model):
                                       help="Enables various digital signature "
                                            "options on invoices.")
 
+    is_sign_user_authorized = fields.Boolean(
+        compute='_compute_is_sign_user_authorized',
+    )
+
+    @api.model
+    def _get_authorized_sign_user_ids(self):
+        param = self.env['ir.config_parameter'].sudo().get_param(
+            'digital_signature.authorized_user_ids',
+            default='',
+        )
+        user_ids = set()
+        if param:
+            for part in param.split(','):
+                part = part.strip()
+                if part.isdigit():
+                    user_ids.add(int(part))
+        return user_ids
+
+    def _compute_is_sign_user_authorized(self):
+        allowed_user_ids = self._get_authorized_sign_user_ids()
+        is_authorized = (not allowed_user_ids) or (self.env.user.id in allowed_user_ids)
+        for record in self:
+            record.is_sign_user_authorized = is_authorized
+
     def _compute_show_signature(self):
         """Compute the 'Show Signature' field on invoices."""
         is_show_signature = self._default_show_sign()
@@ -108,6 +132,9 @@ class AccountMove(models.Model):
 
     def write(self, vals):
         if 'digital_sign' in vals:
+            allowed_user_ids = self._get_authorized_sign_user_ids()
+            if allowed_user_ids and self.env.user.id not in allowed_user_ids:
+                raise UserError(_("You are not allowed to sign this document."))
             results = []
             for move in self:
                 move_vals = dict(vals)

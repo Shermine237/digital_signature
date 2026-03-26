@@ -8,16 +8,17 @@
         <field name="arch" type="xml">
             <xpath expr="//page[@id='invoice_tab']" position="after">
                 <field name="is_show_signature" invisible="1"/>
+                <field name="is_sign_user_authorized" invisible="1"/>
                 <page string="Digital Signature"
                       invisible="is_show_signature == False or move_type != 'out_invoice'">
                     <group>
                         <field name="is_enable_others" invisible="1"/>
-                        <field name="digital_sign" widget="signature" readonly="state not in ('draft', 'posted')"/>
-                        <field name="sign_by" readonly="state not in ('draft', 'posted')"
+                        <field name="digital_sign" widget="signature" readonly="state not in ('draft', 'posted') or is_sign_user_authorized == False"/>
+                        <field name="sign_by" readonly="state not in ('draft', 'posted') or is_sign_user_authorized == False"
                                invisible="is_enable_others == False"/>
-                        <field name="designation" readonly="state not in ('draft', 'posted')"
+                        <field name="designation" readonly="state not in ('draft', 'posted') or is_sign_user_authorized == False"
                                invisible="is_enable_others == False"/>
-                        <field name="sign_on" readonly="state not in ('draft', 'posted')"
+                        <field name="sign_on" readonly="state not in ('draft', 'posted') or is_sign_user_authorized == False"
                                invisible="is_enable_others == False"/>
                     </group>
                 </page>
@@ -25,16 +26,17 @@
             <xpath expr="//page[@id='invoice_tab']" position="after">
                 <field name="is_show_signature" invisible="1"/>
                 <field name="is_show_sign_bill" invisible="1"/>
+                <field name="is_sign_user_authorized" invisible="1"/>
                 <page string="Digital Signature"
                       invisible="is_show_sign_bill == False or move_type != 'in_invoice'">
                     <group>
                         <field name="is_enable_others" invisible="1"/>
-                        <field name="digital_sign" widget="signature" readonly="state not in ('draft', 'posted')"/>
-                        <field name="sign_by" readonly="state not in ('draft', 'posted')"
+                        <field name="digital_sign" widget="signature" readonly="state not in ('draft', 'posted') or is_sign_user_authorized == False"/>
+                        <field name="sign_by" readonly="state not in ('draft', 'posted') or is_sign_user_authorized == False"
                                invisible="is_enable_others == False"/>
-                        <field name="designation" readonly="state not in ('draft', 'posted')"
+                        <field name="designation" readonly="state not in ('draft', 'posted') or is_sign_user_authorized == False"
                                invisible="is_enable_others == False"/>
-                        <field name="sign_on" readonly="state not in ('draft', 'posted')"
+                        <field name="sign_on" readonly="state not in ('draft', 'posted') or is_sign_user_authorized == False"
                                invisible="is_enable_others == False"/>
                     </group>
                 </page>

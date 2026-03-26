@@ -145,6 +145,20 @@
                 <h2>Digital Signature</h2>
                 <div class="row mt16 o_settings_container">
                     <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <label for="sign_user_ids" string="Authorized Sign Users"/>
+                            <div class="text-muted">
+                                Select internal users who are allowed to sign
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="sign_user_ids" widget="many2many_tags"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
                         <div class="o_setting_left_pane">
                             <field name="is_show_digital_sign_invoice"/>
                         </div>
