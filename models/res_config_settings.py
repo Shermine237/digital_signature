@@ -29,6 +29,9 @@ class ResConfigSettings(models.TransientModel):
     sign_user_ids = fields.Many2many(
         comodel_name='res.users',
         string='Authorized Sign Users',
+        relation='digital_signature_res_config_settings_sign_user_rel',
+        column1='settings_id',
+        column2='user_id',
         domain=[('share', '=', False)],
     )
 
